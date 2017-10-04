@@ -1,10 +1,17 @@
 class Bear
-
-
-  def initialize(name, stomach, fish_count)
+  attr_reader :name, :bear_stomach
+  def initialize(name)
     @name = name
-    @stomach = []
-    @fish_count = fish_count
-
+    @bear_stomach = []
   end
+  def take_fish(river)
+    @bear_stomach.push(river.river_fish[0])
+    river.river_fish.delete_at(0)
+
+  # bear need river
+  # bear take 1 fish
+  # remove fish from river
+  # put fish in bear stomach
+  end
+
 end
